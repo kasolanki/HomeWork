@@ -14,7 +14,13 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "morgan": "^1.9.1"
+    "mocha": "^6.0.2",
+    "morgan": "^1.9.1",
+    "node-pre-gyp": "^0.12.0",
+    "package": "^1.0.1",
+    "rebuild": "^0.1.2",
+    "sequelize": "^5.1.0",
+    "sqlite3": "^4.0.6"
   },
   "devDependencies": {
     "nodemon": "^1.18.10",
