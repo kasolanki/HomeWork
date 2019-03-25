@@ -11,7 +11,7 @@ module.exports = {
       }   
        catch (err) {
           res.status(500).send({
-            error: 'An error has occured trying to get the exercise.'
+            error: 'An error has occured trying to get the exercise data.'
           })
         }
       },
@@ -22,7 +22,7 @@ module.exports = {
       }   
       catch (err) {
         res.status(500).send({
-          error: 'An error has occured trying to get your personal exercise.'
+          error: 'An error has occured trying to get specific exercise data.'
           })
         }
       },
@@ -33,7 +33,7 @@ module.exports = {
         }   
         catch (err) {  
           res.status(500).send({
-            error: 'An error has occured trying to put your exercise.'
+            error: 'An error has occured trying to put your exercise data.'
         })
         }
     }
