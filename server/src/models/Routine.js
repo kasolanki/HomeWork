@@ -1,10 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
     const Routine = sequelize.define('Routine', {
-      User: DataTypes.NUMBER,
-      Routine: DataTypes.STRING,
-      RoutineEx: DataTypes.NUMBER,
-      Exercise: DataTypes.NUMBER,
-      Workout: DataTypes.NUMBER
+      RoutineId: DataTypes.NUMBER,
+      RoutineName: DataTypes.STRING,
+      RoutineEx: DataTypes.STRING,
+      RoutineTime: DataTypes.NUMBER
     })
     return Routine
   }

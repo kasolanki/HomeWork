@@ -1,10 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
   const Exercise = sequelize.define('Exercise', {
-    Category: DataTypes.STRING,
-    Exercise: DataTypes.STRING,
-    Sets: DataTypes.NUMBER,
-    Person: DataTypes.STRING,
-    Trainer: DataTypes.STRING
+    ExerciseId: DataTypes.NUMBER,
+    ExerciseType: DataTypes.STRING,
+    ExerciseName: DataTypes.STRING,
+    Description: DataTypes.TEXT,
+    ExerciseEquipment: DataTypes.STRING,
+    DefaultSets: DataTypes.NUMBER
   })
   return Exercise
 }

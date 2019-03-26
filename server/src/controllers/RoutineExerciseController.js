@@ -1,10 +1,10 @@
-const { RunningTrack } = require('../models')
+const { RoutineExercise } = require('../models')
 
 
 module.exports = {
     async index (req, res) {
       try {
-        const exercises = await RunningTrack.findAll({
+        const exercises = await RoutineExercise.findAll({
           limit: 10
         })
         res.send(exercises)
@@ -17,7 +17,7 @@ module.exports = {
       },
     async show (req, res) {
       try {
-        const ex = await RunningTrack.findByPk(req.params.equipId)
+        const ex = await RoutineExercise.findByPk(req.params.REId)
         res.send(ex)
       }   
       catch (err) {
@@ -28,7 +28,7 @@ module.exports = {
       },
     async post (req, res) {
         try {
-        const ex = await RunningTrack.create(req.body)
+        const ex = await RoutineExercise.create(req.body)
         res.send(ex)
         }   
         catch (err) {  

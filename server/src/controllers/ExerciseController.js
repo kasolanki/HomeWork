@@ -1,10 +1,10 @@
-const { Routine } = require('../models')
+const { Exercise } = require('../models')
 
 
 module.exports = {
     async index (req, res) {
       try {
-        const exercises = await Routine.findAll({
+        const exercises = await Exercise.findAll({
           limit: 10
         })
         res.send(exercises)
@@ -17,7 +17,7 @@ module.exports = {
       },
     async show (req, res) {
       try {
-        const ex = await Routine.findByPk(req.params.userId)
+        const ex = await Exercise.findByPk(req.params.ExerciseId)
         res.send(ex)
       }   
       catch (err) {
@@ -27,11 +27,12 @@ module.exports = {
         }
       },
     async post (req, res) {
-        try {
-        const ex = await Routine.create(req.body)
+      try {
+        const ex = await Exercise.create(req.body)
         res.send(ex)
         }   
-        catch (err) {  
+        catch (err) {
+          console.log(err)
           res.status(500).send({
             error: 'An error has occured trying to put your exercise data.'
         })

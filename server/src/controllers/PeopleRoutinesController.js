@@ -1,10 +1,10 @@
-const { ExerciseDetail } = require('../models')
+const { PeopleRoutines } = require('../models')
 
 
 module.exports = {
     async index (req, res) {
       try {
-        const exercises = await ExerciseDetail.findAll({
+        const exercises = await PeopleRoutines.findAll({
           limit: 10
         })
         res.send(exercises)
@@ -17,7 +17,7 @@ module.exports = {
       },
     async show (req, res) {
       try {
-        const ex = await ExerciseDetail.findByPk(req.params.logId)
+        const ex = await PeopleRoutines.findByPk(req.params.PRId)
         res.send(ex)
       }   
       catch (err) {
@@ -28,7 +28,7 @@ module.exports = {
       },
     async post (req, res) {
         try {
-        const ex = await ExerciseDetail.create(req.body)
+        const ex = await PeopleRoutines.create(req.body)
         res.send(ex)
         }   
         catch (err) {  
