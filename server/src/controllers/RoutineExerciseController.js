@@ -17,7 +17,7 @@ module.exports = {
       },
     async show (req, res) {
       try {
-        const ex = await RoutineExercise.findByPk(req.params.REId)
+        const ex = await RoutineExercise.findByPk(req.params.id)
         res.send(ex)
       }   
       catch (err) {
@@ -26,6 +26,32 @@ module.exports = {
           })
         }
       },
+      async delete (req, res) {
+        try{
+            const {id} = req.params
+            const ex = await RoutineExercise.findByPk(id)
+            await ex.destroy()
+            res.send(ex)
+        }catch(err){
+            res.status(500).send({
+              error:'Error occured in deleting record'
+            })
+        }
+    },
+    async update (req, res) {
+      try {
+        await RoutineExercise.update(req.body, {
+          where: {
+            id: req.params.id
+          }
+        })
+        res.send(req.body)
+      } catch (err) {
+        res.status(500).send({
+          error: 'an error has occured trying to update the entry'
+        })
+      }
+  },
     async post (req, res) {
         try {
         const ex = await RoutineExercise.create(req.body)
