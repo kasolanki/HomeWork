@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Exercise from '@/components/Exercise'
+import AddEx from '@/components/AddEx'
 
 Vue.use(Router)
 
@@ -25,9 +26,14 @@ export default new Router({
       component: Login
     },
     {
-      path: '/exercise',
-      name: 'exercise',
+      path: '/Exercise',
+      name: 'Exercise',
       component: Exercise
+    },
+    {
+      path: '/Exercise/Add',
+      name: 'Exercise-Add',
+      component: AddEx
     }
   ]
 })

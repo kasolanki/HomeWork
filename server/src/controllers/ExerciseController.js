@@ -61,7 +61,7 @@ module.exports = {
           console.log(err)
           res.status(500).send({
             error: 'An error has occured trying to put your exercise data.'
-        })
+          })
         }
     }
 }
