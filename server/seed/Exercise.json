@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "squats",
+    "type": "legs",
+    "description": "to gain strength",
+    "equipments": "barbell",
+    "sets": "6" 
+  },
+  {
+    "id": "2",
+    "name": "dumbell press",
+    "type": "chest",
+    "description": "to gain strength",
+    "equipments": "dumbell",
+    "sets": "4"
+  },
+  {
+    "id": "3",
+    "name": "cardio",
+    "type": "cardio",
+    "description": "to gain strength",
+    "equipments": "trademil",
+    "sets": "1"
+  },
+  {
+    "id": "4",
+    "name": "lunges",
+    "type": "legs",
+    "description": "to gain strength",
+    "equipments": "dumbell",
+    "sets": "4"
+  }
+] 
