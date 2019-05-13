@@ -5,6 +5,7 @@ import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Exercise from '@/components/Exercise'
 import AddEx from '@/components/AddEx'
+import ViewEx from '@/components/ViewEx'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/Exercise/Add',
       name: 'Exercise-Add',
       component: AddEx
+    },
+    {
+      path: '/Exercise/id',
+      name: 'Exercise-id',
+      component: ViewEx
     }
   ]
 })

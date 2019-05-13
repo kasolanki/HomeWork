@@ -14,6 +14,16 @@
               <div class="Exercise-ExerciseId">{{Exercise.ExerciseId}}</div>
               <div class="Exercise-ExerciseName">{{Exercise.ExerciseName}}</div>
               <div class="Exercise-DefaultSets">{{Exercise.DefaultSets}}</div>
+
+              <v-btn dark class="cyan" @click="navigateTo({
+                name: 'Exercise-id',
+                params: {
+                  ExerciseId: Exercise.id
+                }
+              })">
+              View
+              </v-btn>
+
             </v-flex>
           </v-layout>
           {{Exercise.ExerciseId}} -
